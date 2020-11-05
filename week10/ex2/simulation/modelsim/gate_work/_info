@@ -1,0 +1,76 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/CA LAB/week10/ex2/simulation/modelsim
+vfull_adder
+Z1 !s110 1604584345
+!i10b 1
+!s100 1Y1IC`fVnMQEIPL8hBRAM3
+Ie;jUZUB94JOJWQN]22mcm3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1604580615
+8D:/CA LAB/week10/ex2/full_adder.v
+FD:/CA LAB/week10/ex2/full_adder.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1604584345.000000
+!s107 D:/CA LAB/week10/ex2/full_adder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/CA LAB/week10/ex2|D:/CA LAB/week10/ex2/full_adder.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work {+incdir+D:/CA LAB/week10/ex2}
+Z7 tCvgOpt 0
+vfull_adder_testbench
+R1
+!i10b 1
+!s100 k5?KJm8V_=EHZM8;MN?^N0
+IWjcK5J2W`hh_8DVol@_Q73
+R2
+R0
+w1604583041
+8D:/CA LAB/week10/ex2/full_adder_testbench.v
+FD:/CA LAB/week10/ex2/full_adder_testbench.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/CA LAB/week10/ex2/full_adder_testbench.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/CA LAB/week10/ex2|D:/CA LAB/week10/ex2/full_adder_testbench.v|
+!i113 1
+R5
+R6
+R7
+vhard_block
+!s110 1604584344
+!i10b 1
+!s100 nh@VHF=db0oomF[fNEFZo3
+IH;^_cMIGbA@X090VBlSFV2
+R2
+R0
+w1604584307
+8full_adder.vo
+Ffull_adder.vo
+L0 280
+R3
+r1
+!s85 0
+31
+!s108 1604584344.000000
+!s107 full_adder.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|full_adder.vo|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+.
+R7

@@ -1,0 +1,94 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/18.1
+vfull_adder
+!s110 1604574451
+!i10b 1
+!s100 7LX?ggDUN4:z@kIS4_Dn_2
+IBRMzhja8kkLX?GKA6XnT>0
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 dD:/CA LAB/week10/ex1
+w1604574448
+8D:/CA LAB/week10/ex1/full_adder.v
+FD:/CA LAB/week10/ex1/full_adder.v
+L0 2
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1604574451.000000
+!s107 D:/CA LAB/week10/ex1/full_adder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/CA LAB/week10/ex1/full_adder.v|
+!i113 1
+Z3 o-work work
+Z4 tCvgOpt 0
+vfull_adder_testbench
+!s110 1604574124
+!i10b 1
+!s100 0;8HVe<NbEH1Sci;g2c:z2
+IBV>KUY0k248dXO@ibGh6W3
+R0
+R1
+w1539855836
+8D:/CA LAB/week10/ex2/full_adder_testbench.v
+FD:/CA LAB/week10/ex2/full_adder_testbench.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1604574124.000000
+!s107 D:/CA LAB/week10/ex2/full_adder_testbench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/CA LAB/week10/ex2/full_adder_testbench.v|
+!i113 1
+R3
+R4
+vfull_testbench
+!s110 1604574510
+!i10b 1
+!s100 @=BlI?CIVM3]gQn9VhQjd3
+I6zoOg:J9mFR>g2ZLibSES0
+R0
+R1
+w1604574504
+Z5 8D:/CA LAB/week10/ex1/full_testbench.v
+Z6 FD:/CA LAB/week10/ex1/full_testbench.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1604574510.000000
+!s107 D:/CA LAB/week10/ex1/full_testbench.v|
+Z7 !s90 -reportprogress|300|-work|work|-stats=none|D:/CA LAB/week10/ex1/full_testbench.v|
+!i113 1
+R3
+R4
+vfulladdertb
+!s110 1604574213
+!i10b 1
+!s100 M[;M1_NihcM^ne=`LRW792
+IV<PnG6QYU9bmBdWjXJDSA2
+R0
+R1
+w1604574186
+R5
+R6
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1604574213.000000
+!s107 D:/CA LAB/week10/ex1/full_testbench.v|
+R7
+!i113 1
+R3
+R4

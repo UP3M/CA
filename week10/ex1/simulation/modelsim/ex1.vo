@@ -1,0 +1,432 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
+
+// DATE "11/05/2020 17:42:09"
+
+// 
+// Device: Altera 10M50DAF484I7G Package FBGA484
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module ex1 (
+	z,
+	x,
+	y,
+	carry);
+output 	z;
+input 	x;
+input 	y;
+output 	carry;
+
+// Design Ports Information
+// z	=>  Location: PIN_V4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// carry	=>  Location: PIN_W6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// x	=>  Location: PIN_Y1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// y	=>  Location: PIN_U6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire a_aQUARTUS_CREATED_GND_aI_combout;
+wire a_aQUARTUS_CREATED_UNVM_a_abusy;
+wire a_aQUARTUS_CREATED_ADC1_a_aeoc;
+wire a_aQUARTUS_CREATED_ADC2_a_aeoc;
+wire z_aoutput_o;
+wire carry_aoutput_o;
+wire x_ainput_o;
+wire y_ainput_o;
+wire inst_acombout;
+wire inst1_acombout;
+
+wire z_aoutput_I_driver;
+wire carry_aoutput_I_driver;
+wire x_ainput_I_driver;
+wire y_ainput_I_driver;
+wire inst_DATAB_driver;
+wire inst_DATAC_driver;
+wire inst1_DATAB_driver;
+wire inst1_DATAC_driver;
+wire a_aQUARTUS_CREATED_UNVM_a_NOSC_ENA_driver;
+wire a_aQUARTUS_CREATED_UNVM_a_XE_YE_driver;
+wire a_aQUARTUS_CREATED_UNVM_a_SE_driver;
+wire a_aQUARTUS_CREATED_ADC1_a_SOC_driver;
+wire a_aQUARTUS_CREATED_ADC1_a_TSEN_driver;
+wire a_aQUARTUS_CREATED_ADC2_a_SOC_driver;
+wire a_aQUARTUS_CREATED_ADC2_a_TSEN_driver;
+wire [4:0] a_aQUARTUS_CREATED_ADC1_a_CHSEL_bus;
+wire [4:0] a_aQUARTUS_CREATED_ADC2_a_CHSEL_bus;
+
+hard_block auto_generated_inst(
+	.devpor(devpor),
+	.devclrn(devclrn),
+	.devoe(devoe));
+
+// Location: LCCOMB_X44_Y42_N24
+fiftyfivenm_lcell_comb a_aQUARTUS_CREATED_GND_aI(
+// Equation(s):
+// a_aQUARTUS_CREATED_GND_aI_combout = GND
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(a_aQUARTUS_CREATED_GND_aI_combout),
+	.cout());
+// synopsys translate_off
+defparam a_aQUARTUS_CREATED_GND_aI.lut_mask = 16'h0000;
+defparam a_aQUARTUS_CREATED_GND_aI.sum_lutc_input = "datac";
+// synopsys translate_on
+
+fiftyfivenm_routing_wire z_aoutput_I_routing_wire_inst (
+	.datain(inst_acombout),
+	.dataout(z_aoutput_I_driver));
+
+// Location: IOOBUF_X14_Y0_N16
+fiftyfivenm_io_obuf z_aoutput(
+	.i(z_aoutput_I_driver),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(z_aoutput_o),
+	.obar());
+// synopsys translate_off
+defparam z_aoutput.bus_hold = "false";
+defparam z_aoutput.open_drain_output = "false";
+// synopsys translate_on
+
+fiftyfivenm_routing_wire carry_aoutput_I_routing_wire_inst (
+	.datain(inst1_acombout),
+	.dataout(carry_aoutput_I_driver));
+
+// Location: IOOBUF_X16_Y0_N30
+fiftyfivenm_io_obuf carry_aoutput(
+	.i(carry_aoutput_I_driver),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(carry_aoutput_o),
+	.obar());
+// synopsys translate_off
+defparam carry_aoutput.bus_hold = "false";
+defparam carry_aoutput.open_drain_output = "false";
+// synopsys translate_on
+
+fiftyfivenm_routing_wire x_ainput_I_routing_wire_inst (
+	.datain(x),
+	.dataout(x_ainput_I_driver));
+
+// Location: IOIBUF_X16_Y0_N22
+fiftyfivenm_io_ibuf x_ainput(
+	.i(x_ainput_I_driver),
+	.ibar(gnd),
+	.nsleep(vcc),
+	.o(x_ainput_o));
+// synopsys translate_off
+defparam x_ainput.bus_hold = "false";
+defparam x_ainput.listen_to_nsleep_signal = "false";
+defparam x_ainput.simulate_z_as = "z";
+// synopsys translate_on
+
+fiftyfivenm_routing_wire y_ainput_I_routing_wire_inst (
+	.datain(y),
+	.dataout(y_ainput_I_driver));
+
+// Location: IOIBUF_X16_Y0_N8
+fiftyfivenm_io_ibuf y_ainput(
+	.i(y_ainput_I_driver),
+	.ibar(gnd),
+	.nsleep(vcc),
+	.o(y_ainput_o));
+// synopsys translate_off
+defparam y_ainput.bus_hold = "false";
+defparam y_ainput.listen_to_nsleep_signal = "false";
+defparam y_ainput.simulate_z_as = "z";
+// synopsys translate_on
+
+fiftyfivenm_routing_wire inst_DATAB_routing_wire_inst (
+	.datain(x_ainput_o),
+	.dataout(inst_DATAB_driver));
+
+fiftyfivenm_routing_wire inst_DATAC_routing_wire_inst (
+	.datain(y_ainput_o),
+	.dataout(inst_DATAC_driver));
+
+// Location: LCCOMB_X16_Y1_N0
+fiftyfivenm_lcell_comb inst(
+// Equation(s):
+// inst_acombout = x_ainput_o $ (y_ainput_o)
+
+	.dataa(gnd),
+	.datab(inst_DATAB_driver),
+	.datac(inst_DATAC_driver),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(inst_acombout),
+	.cout());
+// synopsys translate_off
+defparam inst.lut_mask = 16'h3C3C;
+defparam inst.sum_lutc_input = "datac";
+// synopsys translate_on
+
+fiftyfivenm_routing_wire inst1_DATAB_routing_wire_inst (
+	.datain(x_ainput_o),
+	.dataout(inst1_DATAB_driver));
+
+fiftyfivenm_routing_wire inst1_DATAC_routing_wire_inst (
+	.datain(y_ainput_o),
+	.dataout(inst1_DATAC_driver));
+
+// Location: LCCOMB_X16_Y1_N2
+fiftyfivenm_lcell_comb inst1(
+// Equation(s):
+// inst1_acombout = (x_ainput_o & y_ainput_o)
+
+	.dataa(gnd),
+	.datab(inst1_DATAB_driver),
+	.datac(inst1_DATAC_driver),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(inst1_acombout),
+	.cout());
+// synopsys translate_off
+defparam inst1.lut_mask = 16'hC0C0;
+defparam inst1.sum_lutc_input = "datac";
+// synopsys translate_on
+
+fiftyfivenm_routing_wire a_aQUARTUS_CREATED_UNVM_a_NOSC_ENA_routing_wire_inst (
+	.datain(a_aQUARTUS_CREATED_GND_aI_combout),
+	.dataout(a_aQUARTUS_CREATED_UNVM_a_NOSC_ENA_driver));
+
+fiftyfivenm_routing_wire a_aQUARTUS_CREATED_UNVM_a_XE_YE_routing_wire_inst (
+	.datain(a_aQUARTUS_CREATED_GND_aI_combout),
+	.dataout(a_aQUARTUS_CREATED_UNVM_a_XE_YE_driver));
+
+fiftyfivenm_routing_wire a_aQUARTUS_CREATED_UNVM_a_SE_routing_wire_inst (
+	.datain(a_aQUARTUS_CREATED_GND_aI_combout),
+	.dataout(a_aQUARTUS_CREATED_UNVM_a_SE_driver));
+
+// Location: UNVM_X0_Y40_N40
+fiftyfivenm_unvm a_aQUARTUS_CREATED_UNVM_a(
+	.arclk(vcc),
+	.arshft(vcc),
+	.drclk(vcc),
+	.drshft(vcc),
+	.drdin(vcc),
+	.nprogram(vcc),
+	.nerase(vcc),
+	.nosc_ena(a_aQUARTUS_CREATED_UNVM_a_NOSC_ENA_driver),
+	.par_en(vcc),
+	.xe_ye(a_aQUARTUS_CREATED_UNVM_a_XE_YE_driver),
+	.se(a_aQUARTUS_CREATED_UNVM_a_SE_driver),
+	.ardin(23'b11111111111111111111111),
+	.busy(a_aQUARTUS_CREATED_UNVM_a_abusy),
+	.osc(),
+	.bgpbusy(),
+	.sp_pass(),
+	.se_pass(),
+	.drdout());
+// synopsys translate_off
+defparam a_aQUARTUS_CREATED_UNVM_a.addr_range1_end_addr = -1;
+defparam a_aQUARTUS_CREATED_UNVM_a.addr_range1_offset = -1;
+defparam a_aQUARTUS_CREATED_UNVM_a.addr_range2_offset = -1;
+defparam a_aQUARTUS_CREATED_UNVM_a.is_compressed_image = "false";
+defparam a_aQUARTUS_CREATED_UNVM_a.is_dual_boot = "false";
+defparam a_aQUARTUS_CREATED_UNVM_a.is_eram_skip = "false";
+defparam a_aQUARTUS_CREATED_UNVM_a.max_ufm_valid_addr = -1;
+defparam a_aQUARTUS_CREATED_UNVM_a.max_valid_addr = -1;
+defparam a_aQUARTUS_CREATED_UNVM_a.min_ufm_valid_addr = -1;
+defparam a_aQUARTUS_CREATED_UNVM_a.min_valid_addr = -1;
+defparam a_aQUARTUS_CREATED_UNVM_a.part_name = "quartus_created_unvm";
+defparam a_aQUARTUS_CREATED_UNVM_a.reserve_block = "true";
+// synopsys translate_on
+
+fiftyfivenm_routing_wire a_aQUARTUS_CREATED_ADC1_a_SOC_routing_wire_inst (
+	.datain(a_aQUARTUS_CREATED_GND_aI_combout),
+	.dataout(a_aQUARTUS_CREATED_ADC1_a_SOC_driver));
+
+fiftyfivenm_routing_wire a_aQUARTUS_CREATED_ADC1_a_TSEN_routing_wire_inst (
+	.datain(a_aQUARTUS_CREATED_GND_aI_combout),
+	.dataout(a_aQUARTUS_CREATED_ADC1_a_TSEN_driver));
+
+fiftyfivenm_routing_wire a_aQUARTUS_CREATED_ADC1_a_CHSEL_a0_a_routing_wire_inst (
+	.datain(a_aQUARTUS_CREATED_GND_aI_combout),
+	.dataout(a_aQUARTUS_CREATED_ADC1_a_CHSEL_bus[0]));
+
+fiftyfivenm_routing_wire a_aQUARTUS_CREATED_ADC1_a_CHSEL_a1_a_routing_wire_inst (
+	.datain(a_aQUARTUS_CREATED_GND_aI_combout),
+	.dataout(a_aQUARTUS_CREATED_ADC1_a_CHSEL_bus[1]));
+
+fiftyfivenm_routing_wire a_aQUARTUS_CREATED_ADC1_a_CHSEL_a2_a_routing_wire_inst (
+	.datain(a_aQUARTUS_CREATED_GND_aI_combout),
+	.dataout(a_aQUARTUS_CREATED_ADC1_a_CHSEL_bus[2]));
+
+fiftyfivenm_routing_wire a_aQUARTUS_CREATED_ADC1_a_CHSEL_a3_a_routing_wire_inst (
+	.datain(a_aQUARTUS_CREATED_GND_aI_combout),
+	.dataout(a_aQUARTUS_CREATED_ADC1_a_CHSEL_bus[3]));
+
+fiftyfivenm_routing_wire a_aQUARTUS_CREATED_ADC1_a_CHSEL_a4_a_routing_wire_inst (
+	.datain(a_aQUARTUS_CREATED_GND_aI_combout),
+	.dataout(a_aQUARTUS_CREATED_ADC1_a_CHSEL_bus[4]));
+
+// Location: ADCBLOCK_X43_Y52_N0
+fiftyfivenm_adcblock a_aQUARTUS_CREATED_ADC1_a(
+	.soc(a_aQUARTUS_CREATED_ADC1_a_SOC_driver),
+	.usr_pwd(vcc),
+	.tsen(a_aQUARTUS_CREATED_ADC1_a_TSEN_driver),
+	.clkin_from_pll_c0(gnd),
+	.chsel(a_aQUARTUS_CREATED_ADC1_a_CHSEL_bus),
+	.eoc(a_aQUARTUS_CREATED_ADC1_a_aeoc),
+	.dout());
+// synopsys translate_off
+defparam a_aQUARTUS_CREATED_ADC1_a.analog_input_pin_mask = 0;
+defparam a_aQUARTUS_CREATED_ADC1_a.clkdiv = 1;
+defparam a_aQUARTUS_CREATED_ADC1_a.device_partname_fivechar_prefix = "none";
+defparam a_aQUARTUS_CREATED_ADC1_a.is_this_first_or_second_adc = 1;
+defparam a_aQUARTUS_CREATED_ADC1_a.prescalar = 0;
+defparam a_aQUARTUS_CREATED_ADC1_a.pwd = 1;
+defparam a_aQUARTUS_CREATED_ADC1_a.refsel = 0;
+defparam a_aQUARTUS_CREATED_ADC1_a.reserve_block = "true";
+defparam a_aQUARTUS_CREATED_ADC1_a.testbits = 66;
+defparam a_aQUARTUS_CREATED_ADC1_a.tsclkdiv = 1;
+defparam a_aQUARTUS_CREATED_ADC1_a.tsclksel = 0;
+// synopsys translate_on
+
+fiftyfivenm_routing_wire a_aQUARTUS_CREATED_ADC2_a_SOC_routing_wire_inst (
+	.datain(a_aQUARTUS_CREATED_GND_aI_combout),
+	.dataout(a_aQUARTUS_CREATED_ADC2_a_SOC_driver));
+
+fiftyfivenm_routing_wire a_aQUARTUS_CREATED_ADC2_a_TSEN_routing_wire_inst (
+	.datain(a_aQUARTUS_CREATED_GND_aI_combout),
+	.dataout(a_aQUARTUS_CREATED_ADC2_a_TSEN_driver));
+
+fiftyfivenm_routing_wire a_aQUARTUS_CREATED_ADC2_a_CHSEL_a0_a_routing_wire_inst (
+	.datain(a_aQUARTUS_CREATED_GND_aI_combout),
+	.dataout(a_aQUARTUS_CREATED_ADC2_a_CHSEL_bus[0]));
+
+fiftyfivenm_routing_wire a_aQUARTUS_CREATED_ADC2_a_CHSEL_a1_a_routing_wire_inst (
+	.datain(a_aQUARTUS_CREATED_GND_aI_combout),
+	.dataout(a_aQUARTUS_CREATED_ADC2_a_CHSEL_bus[1]));
+
+fiftyfivenm_routing_wire a_aQUARTUS_CREATED_ADC2_a_CHSEL_a2_a_routing_wire_inst (
+	.datain(a_aQUARTUS_CREATED_GND_aI_combout),
+	.dataout(a_aQUARTUS_CREATED_ADC2_a_CHSEL_bus[2]));
+
+fiftyfivenm_routing_wire a_aQUARTUS_CREATED_ADC2_a_CHSEL_a3_a_routing_wire_inst (
+	.datain(a_aQUARTUS_CREATED_GND_aI_combout),
+	.dataout(a_aQUARTUS_CREATED_ADC2_a_CHSEL_bus[3]));
+
+fiftyfivenm_routing_wire a_aQUARTUS_CREATED_ADC2_a_CHSEL_a4_a_routing_wire_inst (
+	.datain(a_aQUARTUS_CREATED_GND_aI_combout),
+	.dataout(a_aQUARTUS_CREATED_ADC2_a_CHSEL_bus[4]));
+
+// Location: ADCBLOCK_X43_Y51_N0
+fiftyfivenm_adcblock a_aQUARTUS_CREATED_ADC2_a(
+	.soc(a_aQUARTUS_CREATED_ADC2_a_SOC_driver),
+	.usr_pwd(vcc),
+	.tsen(a_aQUARTUS_CREATED_ADC2_a_TSEN_driver),
+	.clkin_from_pll_c0(gnd),
+	.chsel(a_aQUARTUS_CREATED_ADC2_a_CHSEL_bus),
+	.eoc(a_aQUARTUS_CREATED_ADC2_a_aeoc),
+	.dout());
+// synopsys translate_off
+defparam a_aQUARTUS_CREATED_ADC2_a.analog_input_pin_mask = 0;
+defparam a_aQUARTUS_CREATED_ADC2_a.clkdiv = 1;
+defparam a_aQUARTUS_CREATED_ADC2_a.device_partname_fivechar_prefix = "none";
+defparam a_aQUARTUS_CREATED_ADC2_a.is_this_first_or_second_adc = 2;
+defparam a_aQUARTUS_CREATED_ADC2_a.prescalar = 0;
+defparam a_aQUARTUS_CREATED_ADC2_a.pwd = 1;
+defparam a_aQUARTUS_CREATED_ADC2_a.refsel = 0;
+defparam a_aQUARTUS_CREATED_ADC2_a.reserve_block = "true";
+defparam a_aQUARTUS_CREATED_ADC2_a.testbits = 66;
+defparam a_aQUARTUS_CREATED_ADC2_a.tsclkdiv = 1;
+defparam a_aQUARTUS_CREATED_ADC2_a.tsclksel = 0;
+// synopsys translate_on
+
+assign z = z_aoutput_o;
+
+assign carry = carry_aoutput_o;
+
+endmodule
+
+module hard_block (
+
+	devpor,
+	devclrn,
+	devoe);
+
+// Design Ports Information
+// ~ALTERA_TMS~	=>  Location: PIN_H2,	 I/O Standard: 2.5 V Schmitt Trigger,	 Current Strength: Default
+// ~ALTERA_TCK~	=>  Location: PIN_G2,	 I/O Standard: 2.5 V Schmitt Trigger,	 Current Strength: Default
+// ~ALTERA_TDI~	=>  Location: PIN_L4,	 I/O Standard: 2.5 V Schmitt Trigger,	 Current Strength: Default
+// ~ALTERA_TDO~	=>  Location: PIN_M5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_CONFIG_SEL~	=>  Location: PIN_H10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_nCONFIG~	=>  Location: PIN_H9,	 I/O Standard: 2.5 V Schmitt Trigger,	 Current Strength: Default
+// ~ALTERA_nSTATUS~	=>  Location: PIN_G9,	 I/O Standard: 2.5 V Schmitt Trigger,	 Current Strength: Default
+// ~ALTERA_CONF_DONE~	=>  Location: PIN_F8,	 I/O Standard: 2.5 V Schmitt Trigger,	 Current Strength: Default
+
+input 	devpor;
+input 	devclrn;
+input 	devoe;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+wire a_aALTERA_TMS_a_apadout;
+wire a_aALTERA_TCK_a_apadout;
+wire a_aALTERA_TDI_a_apadout;
+wire a_aALTERA_CONFIG_SEL_a_apadout;
+wire a_aALTERA_nCONFIG_a_apadout;
+wire a_aALTERA_nSTATUS_a_apadout;
+wire a_aALTERA_CONF_DONE_a_apadout;
+wire a_aALTERA_TMS_a_aibuf_o;
+wire a_aALTERA_TCK_a_aibuf_o;
+wire a_aALTERA_TDI_a_aibuf_o;
+wire a_aALTERA_CONFIG_SEL_a_aibuf_o;
+wire a_aALTERA_nCONFIG_a_aibuf_o;
+wire a_aALTERA_nSTATUS_a_aibuf_o;
+wire a_aALTERA_CONF_DONE_a_aibuf_o;
+
+wire a_aALTERA_TMS_a_aibuf_I_driver;
+wire a_aALTERA_TCK_a_aibuf_I_driver;
+wire a_aALTERA_TDI_a_aibuf_I_driver;
+wire a_aALTERA_CONFIG_SEL_a_aibuf_I_driver;
+wire a_aALTERA_nCONFIG_a_aibuf_I_driver;
+wire a_aALTERA_nSTATUS_a_aibuf_I_driver;
+wire a_aALTERA_CONF_DONE_a_aibuf_I_driver;
+
+endmodule
